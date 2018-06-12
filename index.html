@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rpg Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!--Header-->
+    <div class="container-fluid py-5">
+        <div class="container text-center">
+            <h1>Twin Peaks Rpg</h1>
+            <div class="row">
+                <div class="col-12 title">
+                    <button class="new-game-button" id="">START</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Main Section-->
+    <div class="container-fluid py-3">
+        <div class="container text-center">
+            <div class="row space">
+                <div class="col-md-3 col-sm-6 mt-3 cat-fav">
+                    <div class="card grab" id="cooper">
+                        <img class="card-img" src="assets/images/char1.jpg" alt="Card image">
+                        <div class="">
+                            Dale Cooper <span id="cooperHealth">120</span>
+                        </div>
+                    </div>
+                </div>
+                <!--.col-->
+                <div class="col-md-3 col-sm-6 mt-3 cat-fav">
+                    <div class="card grab" id="laura">
+                        <img class="card-img" src="assets/images/char2.jpg" alt="Card image">
+                        <div class="">
+                            Laura Palmer <span id="lauraHealth">100</span>
+                        </div>
+                    </div>
+                </div>
+                <!--.col-->
+                <div class="col-md-3 col-sm-6 mt-3 cat-fav">
+                    <div class="card grab" id="audrey">
+                        <img class="card-img" src="assets/images/char3.jpg" alt="Card image">
+                        <div class="">
+                            Audrey Horne <span id="audreyHealth">150</span>
+                        </div>
+                    </div>
+                </div>
+                <!--.col-->
+                <div class="col-md-3 col-sm-6 mt-3 cat-fav">
+                    <div class="card grab" id="leland">
+                        <img class="card-img" src="assets/images/char4.jpg" alt="Card image">
+                        <div class="">
+                            Leland Palmer <span id="lelandHealth">180</span>
+                        </div>
+                    </div>
+                </div>
+                <!--.col-->
+            </div>
+        </div>
+    </div>
+    <!--breaks breaks-->
+    <br><br>
+    <br><br>
+    <!--fight section-->
+    <div class="container-fluid py-3">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-12 col-sm-4 col-lg-4" id="playerChoice"></div>
+                <div class="col-12 col-sm-4 col-lg-4 m-auto" id="textContent">
+                    <button class="btn btn-primary" id="attackButton">Attack</button>
+                </div>
+                <div class="col-12 col-sm-4 col-lg-4" id="enemyChoice"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
