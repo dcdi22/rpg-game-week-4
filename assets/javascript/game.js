@@ -10,6 +10,8 @@
  var leland = $("#leland");
  var lelandHealth = $("#lelandHealth");
  var attackButton = $("#attackButton");
+ var fightText = $("#fightText");
+ var cooperAttack = $("#cooperAttack");
 
  // variables
  var cooperHealth = 120;
@@ -18,6 +20,7 @@
  var lelandHealth = 180;
  var gameRunning = false;
  $("#attackButton").hide();
+ $("#fightText").hide();
  // attack 5, 8, 20, 25
  var cooperAttack = 8;
  var lauraAttack = 5;
@@ -44,30 +47,66 @@
 
 
 
-
+var whatever1;
+var whatever2;
+var attack1;
+var attack2;
  $(".grab").on("click", function () {
+    //  debugger;
      if ($('#playerChoice').is(':empty') && gameRunning) {
          var x = $(this).attr("id");
          console.log(x);
+         var myAttack = $(this).data("id");
+         console.log(myAttack);
+
          $(this).clone().appendTo("#playerChoice");
          $(this).hide();
          $(".chooseYour").html("<h2>Choose Your Enemy</h2>");
-         return x;
+         whatever1 = x;
+         attack1 = myAttack;
      } 
      else if ($('#enemyChoice').is(':empty') && gameRunning) {
          var y = $(this).attr("id");
          console.log(y);
+         var theirAttack = $(this).data("id");
+         console.log(theirAttack);
+
+
          $(this).clone().appendTo("#enemyChoice");
          $(this).hide();
          $(".chooseYour").html("<h2>FIGHT</h2>");
          $("#attackButton").show();
-         return y;
+         whatever2 = y;
+         attack2 = theirAttack;
+         $("#attackButton").on("click", function () {
+            $("#fightText").show();
+            $("#whatever1").text(whatever2);
+            $("#whatever2").text(whatever2);
+
+
+            imAttacking();
+            $("#defenderDamage").text(attack2);
+            //logic behind attack / health here
+
+
+
+
+
+            //when we want to display the new health after an attack:
+            //player gets attacked:
+            $("#playerChoice").children(".health").text("whatever the new health is")
+        })
      }
-     return x, y;
- })
+     //return x, y;
+     console.log("clicked!", whatever1, whatever2, attack1, attack2 );
+ });
 
- console.log(x, y);
+ var attackTotal;
+ function imAttacking() {
+     //this is attack1
+     $("#attackerDamage").text(attack1);
+     attack1 = attack1 + attack1;
+     // your attacktotal should equal what your attack total is plus the original attack numberluvu
+     
+ }
 
- $("#attackButton").on("click", function () {
-
- })

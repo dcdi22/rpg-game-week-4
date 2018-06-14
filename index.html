@@ -8,6 +8,7 @@
     <title>Rpg Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
@@ -21,7 +22,7 @@
             <h1>Twin Peaks Rpg</h1>
             <div class="row">
                 <div class="col-12 title">
-                    <button class="new-game-button" id="">START</button>
+                    <button class="new-game-button btn btn-secondary" id="">START</button>
                 </div>
             </div>
         </div>
@@ -31,37 +32,45 @@
         <div class="container text-center">
             <div class="row space">
                 <div class="col-md-3 col-sm-6 mt-3 cat-fav">
-                    <div class="card grab" id="cooper">
+                    <div class="card grab" healthId="cooperHealth" data-id="8" damageId="cooperAttack" id="cooper">
                         <img class="card-img" src="assets/images/char1.jpg" alt="Card image">
                         <div class="">
-                            Dale Cooper <span id="cooperHealth">120</span>
+                            Dale Cooper
+                            <br>Hp:
+                            <span class="health">120</span>
                         </div>
                     </div>
                 </div>
                 <!--.col-->
                 <div class="col-md-3 col-sm-6 mt-3 cat-fav">
-                    <div class="card grab" id="laura">
+                    <div class="card grab" data-id="5" damageId="lauraAttack" id="laura">
                         <img class="card-img" src="assets/images/char2.jpg" alt="Card image">
                         <div class="">
-                            Laura Palmer <span id="lauraHealth">100</span>
+                            Laura Palmer
+                            <br>Hp:
+                            <span id="lauraHealth">100</span>
                         </div>
                     </div>
                 </div>
                 <!--.col-->
                 <div class="col-md-3 col-sm-6 mt-3 cat-fav">
-                    <div class="card grab" id="audrey">
+                    <div class="card grab" data-id="20" damageId="audreyAttack" id="audrey">
                         <img class="card-img" src="assets/images/char3.jpg" alt="Card image">
                         <div class="">
-                            Audrey Horne <span id="audreyHealth">150</span>
+                            Audrey Horne
+                            <br>Hp:
+                            <span id="audreyHealth">150</span>
                         </div>
                     </div>
                 </div>
                 <!--.col-->
                 <div class="col-md-3 col-sm-6 mt-3 cat-fav">
-                    <div class="card grab" id="leland">
+                    <div class="card grab" data-id="25" damageId="lelandAttack" id="leland">
                         <img class="card-img" src="assets/images/char4.jpg" alt="Card image">
                         <div class="">
-                            Leland Palmer <span id="lelandHealth">180</span>
+                            Leland Palmer
+                            <br>Hp:
+                            <span id="lelandHealth">180</span>
                         </div>
                     </div>
                 </div>
@@ -70,8 +79,10 @@
         </div>
     </div>
     <!--breaks breaks-->
-    <br><br>
-    <br><br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!--fight section-->
     <div class="container-fluid py-3">
         <div class="container text-center">
@@ -79,6 +90,14 @@
                 <div class="col-12 col-sm-4 col-lg-4" id="playerChoice"></div>
                 <div class="col-12 col-sm-4 col-lg-4 m-auto" id="textContent">
                     <button class="btn btn-primary" id="attackButton">Attack</button>
+                    <p id="fightText">
+                        You attacked
+                        <span id="whatever1"></span> for
+                        <span id="attackerDamage"></span> damage.
+                        <br>
+                        <span id="whatever2"></span> attacked you back for
+                        <span id="defenderDamage"></span> damage.
+                    </p>
                 </div>
                 <div class="col-12 col-sm-4 col-lg-4" id="enemyChoice"></div>
             </div>

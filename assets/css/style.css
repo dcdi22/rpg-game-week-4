@@ -3,6 +3,19 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: blue;
+    color: #9A4C12;
+    text-shadow:
+    1px 1px 0 #43962B,
+    -1px -1px 0 #43962B,
+    1px -1px 0 #43962B,
+    1px 1px 0 #43962B,
+    1px 1px 0 #43962B;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: x-large;
+    letter-spacing: 2px;
+}
+h1 {
+    font-size: 4rem;
 }
 
